@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toolify AI | Central de Herramientas y Utilidades de Inteligencia Artificial</title>
-    <!-- Estilos profesionales -->
     <link rel="stylesheet" href="style.css">
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- GOOGLE ADSENSE: Cambia data-ad-client por tu ID real -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous"></script> -->
@@ -32,75 +30,74 @@
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL: HERRAMIENTAS DE IA -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
         
-        <!-- Banner Principal -->
         <div class="text-center space-y-2">
-            <span class="text-xs font-bold uppercase tracking-widest bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">Potenciado por IA</span>
+            <span class="text-xs font-bold uppercase tracking-widest bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">Potenciado por IA Real</span>
             <h2 class="text-3xl md:text-5xl font-extrabold text-white">Crea sin límites con Inteligencia Artificial</h2>
-            <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">Genera prompts profesionales, guiones virales para redes y optimiza textos en segundos.</p>
+            <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">Genera prompts avanzados, guiones virales y humaniza textos con modelos de lenguaje inteligentes.</p>
         </div>
 
         <!-- CUADRÍCULA DE HERRAMIENTAS IA -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- Herramienta 1: Generador de Prompts Maestros para ChatGPT/Claude -->
+            <!-- Herramienta 1: Creador de Prompts Maestros -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
                     <h3 class="font-bold text-lg text-purple-400 flex items-center gap-2">🎯 Creador de Prompts Maestros</h3>
-                    <p class="text-xs text-slate-400 mt-1">Escribe tu idea básica y la convertiremos en una instrucción profesional optimizada para la IA.</p>
+                    <p class="text-xs text-slate-400 mt-1">Escribe tu idea y la IA la convertirá en una instrucción profesional.</p>
                 </div>
                 <div class="space-y-3">
-                    <input type="text" id="input-idea-prompt" placeholder="Ej: Quiero un plan de marketing para zapatillas..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500">
-                    <button onclick="generarPromptMaestro()" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-purple-600/20">
+                    <input type="text" id="input-idea-prompt" placeholder="Ej: Plan de marketing para zapatillas..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500">
+                    <button onclick="generarPromptMaestro()" id="btn-prompt" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-purple-600/20">
                         Generar Prompt Perfecto ⚡
                     </button>
                 </div>
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[60px] flex items-center" id="output-prompt">
-                    El resultado aparecerá aquí...
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[70px] flex items-center" id="output-prompt">
+                    El resultado generado por IA aparecerá aquí...
                 </div>
             </div>
 
-            <!-- Herramienta 2: Generador de Guiones / Hooks para Redes (TikTok/Reels) -->
+            <!-- Herramienta 2: Generador de Hooks Virales -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
                     <h3 class="font-bold text-lg text-pink-400 flex items-center gap-2">🎬 Generador de Hooks Virales (TikTok/Reels)</h3>
-                    <p class="text-xs text-slate-400 mt-1">Crea ganchos mentales automáticos para retener a la audiencia en tus videos.</p>
+                    <p class="text-xs text-slate-400 mt-1">La IA creará ganchos mentales para retener a tu audiencia.</p>
                 </div>
                 <div class="space-y-3">
                     <input type="text" id="input-nicho-video" placeholder="Ej: Finanzas personales, Fitness..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-pink-500">
-                    <button onclick="generarHookViral()" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-pink-600/20">
+                    <button onclick="generarHookViral()" id="btn-hook" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-pink-600/20">
                         Crear Guión Viral 🚀
                     </button>
                 </div>
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[60px] flex items-center" id="output-hook">
-                    Selecciona un nicho...
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[70px] flex items-center" id="output-hook">
+                    Introduce un nicho para empezar...
                 </div>
             </div>
 
-            <!-- Herramienta 3: Humanizador y Limpiador de Textos de IA -->
+            <!-- Herramienta 3: Humanizador de Texto IA -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
-                    <h3 class="font-bold text-lg text-cyan-400 flex items-center gap-2">🧹 Limpiador de Textos Robóticos</h3>
-                    <p class="text-xs text-slate-400 mt-1">Elimina palabras típicas de ChatGPT para que tus textos suenen 100% humanos y naturales.</p>
+                    <h3 class="font-bold text-lg text-cyan-400 flex items-center gap-2">🧹 Humanizador de Textos de IA</h3>
+                    <p class="text-xs text-slate-400 mt-1">Transforma textos robóticos en redacciones naturales y humanas.</p>
                 </div>
                 <textarea id="input-texto-ia" placeholder="Pega tu texto generado por IA aquí..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-cyan-500 h-20 resize-none"></textarea>
-                <button onclick="humanizarTexto()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-cyan-600/20">
+                <button onclick="humanizarTexto()" id="btn-human" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-cyan-600/20">
                     Humanizar Texto ✍️
                 </button>
             </div>
 
-            <!-- Herramienta 4: Generador de Ideas de Negocio Digital con IA -->
+            <!-- Herramienta 4: Creador de Ideas de Negocio -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
                     <h3 class="font-bold text-lg text-emerald-400 flex items-center gap-2">💡 Creador de Ideas de Negocio</h3>
-                    <p class="text-xs text-slate-400 mt-1">Descubre ideas innovadoras para emprender online usando herramientas de automatización.</p>
+                    <p class="text-xs text-slate-400 mt-1">La IA inventará un modelo de negocio digital innovador y rentable.</p>
                 </div>
-                <button onclick="generarIdeaNegocio()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-lg shadow-emerald-600/20">
+                <button onclick="generarIdeaNegocio()" id="btn-negocio" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-lg shadow-emerald-600/20">
                     Inventar Negocio Rentable 💼
                 </button>
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[60px] flex items-center" id="output-negocio">
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[70px] flex items-center" id="output-negocio">
                     Haz clic en el botón para inspirarte...
                 </div>
             </div>
@@ -114,12 +111,12 @@
             </div>
         </div>
 
-        <!-- Sección de Donación / Apoyo Profesional -->
+        <!-- Sección de Apoyo -->
         <div class="bg-gradient-to-r from-purple-950/40 to-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
             <div class="space-y-2 text-center md:text-left">
                 <span class="text-xs font-bold uppercase bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">Herramientas Abiertas</span>
                 <h3 class="text-xl font-bold text-white">¿Te apoya Toolify AI en tu día a día?</h3>
-                <p class="text-slate-400 text-sm max-w-xl">Mantenemos los servidores y algoritmos gratuitos gracias a las aportaciones de la comunidad y la publicidad.</p>
+                <p class="text-slate-400 text-sm max-w-xl">Mantenemos la potencia de los servidores y modelos de IA gratuitos gracias al apoyo de la comunidad.</p>
             </div>
             <a href="https://buy.stripe.com/tu_enlace_de_pago" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-6 py-3.5 rounded-2xl text-sm transition shadow-lg shadow-purple-600/30 whitespace-nowrap">
                 Apoyar el proyecto (3,00 €) ☕
@@ -130,7 +127,7 @@
 
     <!-- PIE DE PÁGINA -->
     <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500 space-y-2">
-        <p>&copy; 2026 Toolify AI. Todos los derechos reservados. Plataforma optimizada para creadores.</p>
+        <p>&copy; 2026 Toolify AI. Todos los derechos reservados. Plataforma potenciada con Inteligencia Artificial.</p>
     </footer>
 
     <!-- MODAL DE ACCESO LOCAL -->
@@ -140,7 +137,7 @@
                 <h3 class="text-xl font-black text-white">Acceso a Toolify AI</h3>
                 <button onclick="cerrarModalAuth()" class="text-slate-400 hover:text-white font-bold">&times;</button>
             </div>
-            <p class="text-xs text-slate-400">Guarda tus prompts y configuraciones favoritas localmente introduciendo tu correo electrónico.</p>
+            <p class="text-xs text-slate-400">Guarda tus prompts y configuraciones favoritas introduciendo tu correo electrónico.</p>
             <div class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-slate-300 mb-1">Correo electrónico</label>
@@ -153,7 +150,6 @@
         </div>
     </div>
 
-    <!-- Script de lógica -->
     <script src="app.js"></script>
 </body>
 </html>
