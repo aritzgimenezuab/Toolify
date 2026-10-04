@@ -1,0 +1,21 @@
+/* Estilos globales profesionales adicionales */
+body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+textarea::-webkit-scrollbar,
+div::-webkit-scrollbar {
+    width: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+    background-color: #1e293b;
+    border-radius: 4px;
+}
+
+.ad-banner {
+    letter-spacing: 0.1em;
+    font-family: monospace;
+}
