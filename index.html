@@ -3,98 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toolify | Utilidades Web Profesionales Gratuitas</title>
-    <!-- Vinculación con los estilos profesionales -->
+    <title>Toolify AI | Central de Herramientas y Utilidades de Inteligencia Artificial</title>
+    <!-- Estilos profesionales -->
     <link rel="stylesheet" href="style.css">
-    <!-- Tailwind CSS para componentes rápidos y limpios -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- GOOGLE ADSENSE: Cambia data-ad-client por tu ID real cuando te lo den -->
+    <!-- GOOGLE ADSENSE: Cambia data-ad-client por tu ID real -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous"></script> -->
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- ANUNCIO SUPERIOR GOOGLE ADSENSE -->
+    <!-- CABECERA Y ANUNCIO -->
     <header class="w-full bg-slate-900 border-b border-slate-800 py-3">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="max-w-5xl mx-auto px-4 text-center">
             <div class="ad-banner bg-slate-950 border border-slate-800 rounded-lg p-2 text-xs text-slate-500 uppercase tracking-widest">
                 [ Espacio Publicitario Google AdSense - Superior ]
             </div>
         </div>
-        <!-- Navbar principal -->
         <div class="max-w-6xl mx-auto px-4 mt-3 flex justify-between items-center">
-            <h1 class="text-2xl font-black tracking-tighter uppercase bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-                Toolify<span class="text-emerald-500">.</span>
+            <h1 class="text-2xl font-black tracking-tighter uppercase bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+                Toolify AI<span class="text-pink-500">.</span>
             </h1>
             <div id="auth-container" class="flex items-center space-x-3">
-                <!-- Se gestiona dinámicamente desde app.js -->
-                <button onclick="abrirModalAuth()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-lg shadow-emerald-600/20">
-                    Iniciar Sesión / Cuenta
+                <button onclick="abrirModalAuth()" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-lg shadow-purple-600/20">
+                    Mi Cuenta / Acceso
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL: MULTIPLES HERRAMIENTAS AUTOMATIZADAS -->
+    <!-- CONTENIDO PRINCIPAL: HERRAMIENTAS DE IA -->
     <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
         
-        <!-- Banner de Bienvenida -->
+        <!-- Banner Principal -->
         <div class="text-center space-y-2">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white">Utilidades Web Instantáneas</h2>
-            <p class="text-slate-400 text-sm md:text-base">Herramientas profesionales listas para usar en tu navegador sin instalar nada.</p>
+            <span class="text-xs font-bold uppercase tracking-widest bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">Potenciado por IA</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white">Crea sin límites con Inteligencia Artificial</h2>
+            <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">Genera prompts profesionales, guiones virales para redes y optimiza textos en segundos.</p>
         </div>
 
-        <!-- Cuadrícula de Herramientas (Grid Profesional) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- CUADRÍCULA DE HERRAMIENTAS IA -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- Herramienta 1: Limpiador y Transformador de Texto -->
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-xl">
+            <!-- Herramienta 1: Generador de Prompts Maestros para ChatGPT/Claude -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
-                    <h3 class="font-bold text-lg text-emerald-400 flex items-center gap-2">📝 Limpiador de Texto</h3>
-                    <p class="text-xs text-slate-400 mt-1">Convierte a mayúsculas, minúsculas o elimina espacios extra al instante.</p>
+                    <h3 class="font-bold text-lg text-purple-400 flex items-center gap-2">🎯 Creador de Prompts Maestros</h3>
+                    <p class="text-xs text-slate-400 mt-1">Escribe tu idea básica y la convertiremos en una instrucción profesional optimizada para la IA.</p>
                 </div>
-                <textarea id="input-texto" placeholder="Escribe o pega tu texto aquí..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 h-24 resize-none"></textarea>
-                <div class="flex gap-2">
-                    <button onclick="convertirTexto('mayus')" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold py-2 rounded-lg transition">MAYÚS</button>
-                    <button onclick="convertirTexto('minus')" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold py-2 rounded-lg transition">minús</button>
-                    <button onclick="limpiarEspacios()" class="flex-1 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold py-2 rounded-lg transition">Limpiar</button>
+                <div class="space-y-3">
+                    <input type="text" id="input-idea-prompt" placeholder="Ej: Quiero un plan de marketing para zapatillas..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500">
+                    <button onclick="generarPromptMaestro()" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-purple-600/20">
+                        Generar Prompt Perfecto ⚡
+                    </button>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[60px] flex items-center" id="output-prompt">
+                    El resultado aparecerá aquí...
                 </div>
             </div>
 
-            <!-- Herramienta 2: Generador de Contraseñas Seguras -->
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-xl">
+            <!-- Herramienta 2: Generador de Guiones / Hooks para Redes (TikTok/Reels) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
-                    <h3 class="font-bold text-lg text-cyan-400 flex items-center gap-2">🔐 Generador Seguros</h3>
-                    <p class="text-xs text-slate-400 mt-1">Crea contraseñas inviolables con símbolos, números y letras.</p>
+                    <h3 class="font-bold text-lg text-pink-400 flex items-center gap-2">🎬 Generador de Hooks Virales (TikTok/Reels)</h3>
+                    <p class="text-xs text-slate-400 mt-1">Crea ganchos mentales automáticos para retener a la audiencia en tus videos.</p>
                 </div>
-                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex justify-between items-center">
-                    <span id="output-password" class="font-mono text-emerald-400 text-sm tracking-wider">Pulsar generar</span>
-                    <button onclick="copiarPassword()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Copiar</button>
+                <div class="space-y-3">
+                    <input type="text" id="input-nicho-video" placeholder="Ej: Finanzas personales, Fitness..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-pink-500">
+                    <button onclick="generarHookViral()" class="w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-pink-600/20">
+                        Crear Guión Viral 🚀
+                    </button>
                 </div>
-                <button onclick="generarPassword()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-cyan-600/20">
-                    Generar Contraseña ⚡
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[60px] flex items-center" id="output-hook">
+                    Selecciona un nicho...
+                </div>
+            </div>
+
+            <!-- Herramienta 3: Humanizador y Limpiador de Textos de IA -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
+                <div>
+                    <h3 class="font-bold text-lg text-cyan-400 flex items-center gap-2">🧹 Limpiador de Textos Robóticos</h3>
+                    <p class="text-xs text-slate-400 mt-1">Elimina palabras típicas de ChatGPT para que tus textos suenen 100% humanos y naturales.</p>
+                </div>
+                <textarea id="input-texto-ia" placeholder="Pega tu texto generado por IA aquí..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-cyan-500 h-20 resize-none"></textarea>
+                <button onclick="humanizarTexto()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-cyan-600/20">
+                    Humanizar Texto ✍️
                 </button>
             </div>
 
-            <!-- Herramienta 3: Contador de Palabras y Caracteres -->
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-xl">
+            <!-- Herramienta 4: Generador de Ideas de Negocio Digital con IA -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
                 <div>
-                    <h3 class="font-bold text-lg text-purple-400 flex items-center gap-2">📊 Analizador de Texto</h3>
-                    <p class="text-xs text-slate-400 mt-1">Mide palabras, caracteres y tiempo estimado de lectura.</p>
+                    <h3 class="font-bold text-lg text-emerald-400 flex items-center gap-2">💡 Creador de Ideas de Negocio</h3>
+                    <p class="text-xs text-slate-400 mt-1">Descubre ideas innovadoras para emprender online usando herramientas de automatización.</p>
                 </div>
-                <textarea id="input-analizador" oninput="analizarTexto()" placeholder="Introduce texto para analizar..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500 h-20 resize-none"></textarea>
-                <div class="grid grid-cols-3 gap-2 text-center">
-                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
-                        <span class="block text-[10px] text-slate-500 uppercase font-bold">Palabras</span>
-                        <span id="stat-palabras" class="text-sm font-bold text-purple-400">0</span>
-                    </div>
-                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
-                        <span class="block text-[10px] text-slate-500 uppercase font-bold">Caracteres</span>
-                        <span id="stat-caracteres" class="text-sm font-bold text-purple-400">0</span>
-                    </div>
-                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
-                        <span class="block text-[10px] text-slate-500 uppercase font-bold">Lectura</span>
-                        <span id="stat-tiempo" class="text-sm font-bold text-purple-400">0s</span>
-                    </div>
+                <button onclick="generarIdeaNegocio()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-lg shadow-emerald-600/20">
+                    Inventar Negocio Rentable 💼
+                </button>
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-300 font-mono min-h-[60px] flex items-center" id="output-negocio">
+                    Haz clic en el botón para inspirarte...
                 </div>
             </div>
 
@@ -103,53 +110,50 @@
         <!-- ANUNCIO INTERMEDIO GOOGLE ADSENSE -->
         <div class="w-full bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center my-6">
             <div class="ad-banner bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs text-slate-500 uppercase tracking-widest">
-                [ Espacio Publicitario Google AdSense - Bloque Intermedio Integrado ]
+                [ Espacio Publicitario Google AdSense - Bloque Intermedio ]
             </div>
         </div>
 
-        <!-- Sección de Monetización / Pasarela de Donación o Servicios Pro (Integrada) -->
-        <div class="bg-gradient-to-r from-slate-900 to-slate-900/80 border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+        <!-- Sección de Donación / Apoyo Profesional -->
+        <div class="bg-gradient-to-r from-purple-950/40 to-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
             <div class="space-y-2 text-center md:text-left">
-                <span class="text-xs font-bold uppercase bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20">Apoya el proyecto</span>
-                <h3 class="text-xl font-bold text-white">¿Te resultan útiles estas herramientas?</h3>
-                <p class="text-slate-400 text-sm max-w-xl">Ayúdanos a mantener los servidores gratuitos y añadir nuevas funciones haciendo una donación segura o adquiriendo la versión sin publicidad.</p>
+                <span class="text-xs font-bold uppercase bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">Herramientas Abiertas</span>
+                <h3 class="text-xl font-bold text-white">¿Te apoya Toolify AI en tu día a día?</h3>
+                <p class="text-slate-400 text-sm max-w-xl">Mantenemos los servidores y algoritmos gratuitos gracias a las aportaciones de la comunidad y la publicidad.</p>
             </div>
-            <!-- Botón de Pago Real Integrado (Stripe / PayPal link) -->
-                <a href="#" onclick="alert('¡Próximamente disponible el sistema de apoyo!'); return false;" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-2xl text-sm transition shadow-lg shadow-emerald-600/30 whitespace-nowrap">
-                    Invítanos a un café (3,00 €) ☕
-                </a>
+            <a href="https://buy.stripe.com/tu_enlace_de_pago" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-6 py-3.5 rounded-2xl text-sm transition shadow-lg shadow-purple-600/30 whitespace-nowrap">
+                Apoyar el proyecto (3,00 €) ☕
+            </a>
         </div>
 
     </main>
 
-    <!-- PIE DE PÁGINA PROFESIONAL -->
+    <!-- PIE DE PÁGINA -->
     <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500 space-y-2">
-        <p>&copy; 2026 Toolify. Todos los derechos reservados. Plataforma automatizada de utilidades web.</p>
-        <p class="text-slate-600">No requiere configuración. Funciona de manera autónoma.</p>
+        <p>&copy; 2026 Toolify AI. Todos los derechos reservados. Plataforma optimizada para creadores.</p>
     </footer>
 
-    <!-- MODAL DE INICIO DE SESIÓN / REGISTRO AUTOMÁTICO -->
+    <!-- MODAL DE ACCESO LOCAL -->
     <div id="auth-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl space-y-6 relative">
             <div class="flex justify-between items-center">
-                <h3 class="text-xl font-black text-white">Acceso de Usuario</h3>
+                <h3 class="text-xl font-black text-white">Acceso a Toolify AI</h3>
                 <button onclick="cerrarModalAuth()" class="text-slate-400 hover:text-white font-bold">&times;</button>
             </div>
-            <p class="text-xs text-slate-400">Crea una cuenta gratuita introduciendo cualquier correo electrónico (el sistema lo guarda automáticamente en tu navegador con LocalStorage sin necesidad de servidor).</p>
-            
+            <p class="text-xs text-slate-400">Guarda tus prompts y configuraciones favoritas localmente introduciendo tu correo electrónico.</p>
             <div class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-slate-300 mb-1">Correo electrónico</label>
-                    <input type="email" id="user-email-input" placeholder="tu_correo@gmail.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500">
+                    <input type="email" id="user-email-input" placeholder="tu_correo@gmail.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500">
                 </div>
-                <button onclick="guardarSesion()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-emerald-600/20">
-                    Entrar o Registrarse 🚀
+                <button onclick="guardarSesion()" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-purple-600/20">
+                    Acceder a mi cuenta 🚀
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Enlace al archivo de lógica JavaScript -->
+    <!-- Script de lógica -->
     <script src="app.js"></script>
 </body>
 </html>
