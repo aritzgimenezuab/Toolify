@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolify | Utilidades Web Profesionales Gratuitas</title>
+    <!-- Vinculación con los estilos profesionales -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS para componentes rápidos y limpios -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GOOGLE ADSENSE: Cambia data-ad-client por tu ID real cuando te lo den -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx" crossorigin="anonymous"></script> -->
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- ANUNCIO SUPERIOR GOOGLE ADSENSE -->
+    <header class="w-full bg-slate-900 border-b border-slate-800 py-3">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="ad-banner bg-slate-950 border border-slate-800 rounded-lg p-2 text-xs text-slate-500 uppercase tracking-widest">
+                [ Espacio Publicitario Google AdSense - Superior ]
+            </div>
+        </div>
+        <!-- Navbar principal -->
+        <div class="max-w-6xl mx-auto px-4 mt-3 flex justify-between items-center">
+            <h1 class="text-2xl font-black tracking-tighter uppercase bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+                Toolify<span class="text-emerald-500">.</span>
+            </h1>
+            <div id="auth-container" class="flex items-center space-x-3">
+                <!-- Se gestiona dinámicamente desde app.js -->
+                <button onclick="abrirModalAuth()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition shadow-lg shadow-emerald-600/20">
+                    Iniciar Sesión / Cuenta
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL: MULTIPLES HERRAMIENTAS AUTOMATIZADAS -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full space-y-8">
+        
+        <!-- Banner de Bienvenida -->
+        <div class="text-center space-y-2">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white">Utilidades Web Instantáneas</h2>
+            <p class="text-slate-400 text-sm md:text-base">Herramientas profesionales listas para usar en tu navegador sin instalar nada.</p>
+        </div>
+
+        <!-- Cuadrícula de Herramientas (Grid Profesional) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Herramienta 1: Limpiador y Transformador de Texto -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-xl">
+                <div>
+                    <h3 class="font-bold text-lg text-emerald-400 flex items-center gap-2">📝 Limpiador de Texto</h3>
+                    <p class="text-xs text-slate-400 mt-1">Convierte a mayúsculas, minúsculas o elimina espacios extra al instante.</p>
+                </div>
+                <textarea id="input-texto" placeholder="Escribe o pega tu texto aquí..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 h-24 resize-none"></textarea>
+                <div class="flex gap-2">
+                    <button onclick="convertirTexto('mayus')" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold py-2 rounded-lg transition">MAYÚS</button>
+                    <button onclick="convertirTexto('minus')" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold py-2 rounded-lg transition">minús</button>
+                    <button onclick="limpiarEspacios()" class="flex-1 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold py-2 rounded-lg transition">Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Herramienta 2: Generador de Contraseñas Seguras -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-xl">
+                <div>
+                    <h3 class="font-bold text-lg text-cyan-400 flex items-center gap-2">🔐 Generador Seguros</h3>
+                    <p class="text-xs text-slate-400 mt-1">Crea contraseñas inviolables con símbolos, números y letras.</p>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex justify-between items-center">
+                    <span id="output-password" class="font-mono text-emerald-400 text-sm tracking-wider">Pulsar generar</span>
+                    <button onclick="copiarPassword()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition">Copiar</button>
+                </div>
+                <button onclick="generarPassword()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow-lg shadow-cyan-600/20">
+                    Generar Contraseña ⚡
+                </button>
+            </div>
+
+            <!-- Herramienta 3: Contador de Palabras y Caracteres -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-xl">
+                <div>
+                    <h3 class="font-bold text-lg text-purple-400 flex items-center gap-2">📊 Analizador de Texto</h3>
+                    <p class="text-xs text-slate-400 mt-1">Mide palabras, caracteres y tiempo estimado de lectura.</p>
+                </div>
+                <textarea id="input-analizador" oninput="analizarTexto()" placeholder="Introduce texto para analizar..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500 h-20 resize-none"></textarea>
+                <div class="grid grid-cols-3 gap-2 text-center">
+                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
+                        <span class="block text-[10px] text-slate-500 uppercase font-bold">Palabras</span>
+                        <span id="stat-palabras" class="text-sm font-bold text-purple-400">0</span>
+                    </div>
+                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
+                        <span class="block text-[10px] text-slate-500 uppercase font-bold">Caracteres</span>
+                        <span id="stat-caracteres" class="text-sm font-bold text-purple-400">0</span>
+                    </div>
+                    <div class="bg-slate-950 p-2 rounded-xl border border-slate-800">
+                        <span class="block text-[10px] text-slate-500 uppercase font-bold">Lectura</span>
+                        <span id="stat-tiempo" class="text-sm font-bold text-purple-400">0s</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ANUNCIO INTERMEDIO GOOGLE ADSENSE -->
+        <div class="w-full bg-slate-900 border border-slate-800 rounded-2xl p-4 text-center my-6">
+            <div class="ad-banner bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs text-slate-500 uppercase tracking-widest">
+                [ Espacio Publicitario Google AdSense - Bloque Intermedio Integrado ]
+            </div>
+        </div>
+
+        <!-- Sección de Monetización / Pasarela de Donación o Servicios Pro (Integrada) -->
+        <div class="bg-gradient-to-r from-slate-900 to-slate-900/80 border border-slate-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <div class="space-y-2 text-center md:text-left">
+                <span class="text-xs font-bold uppercase bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20">Apoya el proyecto</span>
+                <h3 class="text-xl font-bold text-white">¿Te resultan útiles estas herramientas?</h3>
+                <p class="text-slate-400 text-sm max-w-xl">Ayúdanos a mantener los servidores gratuitos y añadir nuevas funciones haciendo una donación segura o adquiriendo la versión sin publicidad.</p>
+            </div>
+            <!-- Botón de Pago Real Integrado (Stripe / PayPal link) -->
+            <a href="https://buy.stripe.com/tu_enlace_de_pago" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-2xl text-sm transition shadow-lg shadow-emerald-600/30 whitespace-nowrap">
+                Invítanos a un café (3,00 €) ☕
+            </a>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA PROFESIONAL -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-500 space-y-2">
+        <p>&copy; 2026 Toolify. Todos los derechos reservados. Plataforma automatizada de utilidades web.</p>
+        <p class="text-slate-600">No requiere configuración. Funciona de manera autónoma.</p>
+    </footer>
+
+    <!-- MODAL DE INICIO DE SESIÓN / REGISTRO AUTOMÁTICO -->
+    <div id="auth-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 md:p-8 shadow-2xl space-y-6 relative">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xl font-black text-white">Acceso de Usuario</h3>
+                <button onclick="cerrarModalAuth()" class="text-slate-400 hover:text-white font-bold">&times;</button>
+            </div>
+            <p class="text-xs text-slate-400">Crea una cuenta gratuita introduciendo cualquier correo electrónico (el sistema lo guarda automáticamente en tu navegador con LocalStorage sin necesidad de servidor).</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Correo electrónico</label>
+                    <input type="email" id="user-email-input" placeholder="tu_correo@gmail.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500">
+                </div>
+                <button onclick="guardarSesion()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-emerald-600/20">
+                    Entrar o Registrarse 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace al archivo de lógica JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
